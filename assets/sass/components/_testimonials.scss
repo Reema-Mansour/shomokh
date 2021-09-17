@@ -1,0 +1,56 @@
+.testim {
+    h2 {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &-inner {
+        padding: 5% 0;
+    }
+
+
+    .owl-theme .owl-nav [class*=owl-] {
+        background-color: $color-primary-light !important;
+
+    }
+
+    .owl-item {
+        transform: scale(0.9);
+        transition: transform 0.3s ease-in-out;
+        opacity: 0.5;
+
+        &.center {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    &-img {
+        max-height: 638px;
+        overflow: hidden;
+    }
+
+    .owl-nav {
+        display: block;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        button {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50% !important;
+            width: 30px;
+            height: 30px;
+
+        }
+
+    }
+}

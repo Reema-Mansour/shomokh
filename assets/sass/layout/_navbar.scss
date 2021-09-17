@@ -1,0 +1,163 @@
+.navbar {
+    padding-top: 4rem;
+    padding-right: 4.6rem;
+
+    @include respond(1199) {
+        padding: 3rem 2rem 0;
+    }
+
+    @include respond(991) {
+        padding: 1.5rem 1rem 0;
+    }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 100%;
+        background-color: $color-primary-lightest;
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+        transition: background-color 0.5s ease-in-out;
+
+        @include respond(767) {
+            padding: 1rem;
+        }
+
+        .nav-item {
+            padding-bottom: 0 !important;
+        }
+
+        .nav-link {
+            color: $color-primary;
+        }
+
+        .navbar-brand {
+            max-width: 8rem;
+            max-height: 8rem;
+
+            @include respond(767) {
+                max-width: 7rem;
+                max-height: 7rem;
+            }
+        }
+
+        .menu-toggler {
+            i {
+                color: $color-primary;
+            }
+
+        }
+    }
+
+
+    .navbar-brand {
+        margin: 0 0 0 10px;
+        max-width: 9rem;
+        max-height: 9rem;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        transform: translateY(15%);
+
+        @include respond(767) {
+            transform: translateY(0%);
+            max-width: 8rem;
+            max-height: 8rem;
+        }
+    }
+
+    .container {
+        justify-content: stretch;
+
+        @include respond(767) {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .navbar-menu {
+        @include respond (767) {
+            display: none !important;
+        }
+
+        .nav-item {
+            padding-bottom: 7px;
+            position: relative;
+
+            &:after {
+                content: "";
+                width: 0;
+                height: 0.5rem;
+                background-color: $color-primary;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: block;
+                transition: width 0.3s ease-in-out;
+                transform: translateY(50%);
+
+            }
+
+            &.active {
+                font-weight: bold
+            }
+
+            &:hover,
+            &.active {
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-left: 1.8rem;
+
+                @include respond(991) {
+                    margin-left: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .nav-link {
+        font-size: var(--font-size-18);
+        line-height: 42px;
+        font-weight: --weight-regular;
+        padding: 0;
+        color: $color-white;
+
+        &.brown {
+            color: $color-primary;
+        }
+
+        &.brown-md {
+            @include respond (991) {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .navbar-menu {
+        flex: 1 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-primary;
+        padding-right: 15px;
+
+    }
+
+    .menu-toggler {
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        font-size: 18px;
+
+        i {
+            color: $color-white;
+        }
+
+    }
+}

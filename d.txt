@@ -1,0 +1,48 @@
+.icon-arrow-right {
+  position: relative;
+  background-image: url(../svg/arrow-right.svg);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: center;
+  background-size: 7.8px 12.15px;
+  background-repeat: no-repeat;
+}
+.icon-arrow-left {
+  position: relative;
+  background-image: url(../svg/arrow-left.svg);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: center;
+  background-size: 7.8px 12.15px;
+  background-repeat: no-repeat;
+}
+.icon-whats,
+.icon-snap,
+.icon-twitter,
+.icon-insta,
+.icon-face {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.icon-whats {
+  background-image: url(../svg/whatsapp.svg);
+}
+.icon-snap {
+  background-image: url(../svg/snapchat.svg);
+}
+
+.icon-twitter {
+  background-image: url(../svg/twitter.svg);
+}
+.icon-insta {
+  background-image: url(../svg/instagram.svg);
+}
+.icon-face {
+  background-image: url(../svg/facebook.svg);
+}

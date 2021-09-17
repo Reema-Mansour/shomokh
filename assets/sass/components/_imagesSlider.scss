@@ -1,0 +1,50 @@
+.images-slider {
+    margin-bottom: 10%;
+
+    .item {
+        &-img-wrap {
+            height: 277px;
+            background-color: $color-primary-lighter;
+            overflow: hidden;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+
+    .owl-carousel {
+        padding: 0 45px;
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background-color: $color-primary-lighter !important;
+    }
+
+    .owl-nav {
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        button {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50% !important;
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+}

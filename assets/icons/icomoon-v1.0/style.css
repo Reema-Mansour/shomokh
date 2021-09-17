@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?dayyk0");
+  src: url("fonts/icomoon.eot?dayyk0#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?dayyk0") format("truetype"),
+    url("fonts/icomoon.woff?dayyk0") format("woff"),
+    url("fonts/icomoon.svg?dayyk0#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-toggler:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-check:before {
+  content: "\e902";
+  color: #954f60;
+}
+.icon-hourglass:before {
+  content: "\e905";
+  color: #5b1c26;
+}
+.icon-mars:before {
+  content: "\e906";
+  color: #5b1c26;
+}
+.icon-running:before {
+  content: "\e907";
+  color: #5b1c26;
+}
+.icon-muscle:before {
+  content: "\e908";
+  color: #5b1c26;
+}
+.icon-stress:before {
+  content: "\e909";
+  color: #5b1c26;
+}
+.icon-blood:before {
+  content: "\e90a";
+  color: #5b1c26;
+}
+.icon-dumbbell:before {
+  content: "\e90b";
+  color: #5b1c26;
+}
+.icon-gender:before {
+  content: "\e90c";
+  color: #5b1c26;
+}
+.icon-arrow_back_ios:before {
+  content: "\e90d";
+}
+.icon-arrow_forward_ios:before {
+  content: "\e90e";
+}
+.icon-arrow-right {
+  position: relative;
+  background-image: url(../svg/arrow-right.svg);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: center;
+  background-size: 7.8px 12.15px;
+  background-repeat: no-repeat;
+}
+.icon-arrow-left {
+  position: relative;
+  background-image: url(../svg/arrow-left.svg);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: center;
+  background-size: 7.8px 12.15px;
+  background-repeat: no-repeat;
+}
+.icon-whats,
+.icon-snap,
+.icon-twitter,
+.icon-insta,
+.icon-face {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.icon-whats {
+  background-image: url(../svg/whatsapp.svg);
+}
+.icon-snap {
+  background-image: url(../svg/snapchat.svg);
+}
+
+.icon-twitter {
+  background-image: url(../svg/twitter.svg);
+}
+.icon-insta {
+  background-image: url(../svg/instagram.svg);
+}
+.icon-face {
+  background-image: url(../svg/facebook.svg);
+}

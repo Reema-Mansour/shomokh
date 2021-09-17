@@ -1,0 +1,87 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint==380 {
+        @media only screen and (max-width:380px) {
+            @content
+        }
+
+        ; //575px
+    }
+
+    @if $breakpoint==400 {
+        @media only screen and (max-width:400px) {
+            @content
+        }
+
+        ; //575px
+    }
+
+    @if $breakpoint==460 {
+        @media only screen and (max-width:460px) {
+            @content
+        }
+
+        ; //575px
+    }
+
+    @if $breakpoint==575 {
+        @media only screen and (max-width: 575px) {
+            @content
+        }
+
+        ; //575px
+    }
+
+    @if $breakpoint==767 {
+        @media only screen and (max-width:767px) {
+            @content
+        }
+
+        ; //767px
+    }
+
+    @if $breakpoint==991 {
+        @media only screen and (max-width: 991px) {
+            @content
+        }
+
+        ; //991px
+    }
+
+    @if $breakpoint==1199 {
+        @media only screen and (max-width: 1199px) {
+            @content
+        }
+
+        ; //1200
+    }
+
+    @if $breakpoint==1399 {
+        @media only screen and (max-width: 1399px) {
+            @content
+        }
+
+        ; //1400
+    }
+
+    @if $breakpoint==1599 {
+        @media only screen and (min-width: 1599px) {
+            @content
+        }
+
+        ; //1600
+    }
+}
+
+@mixin text($fontSize, $fontWeight, $color) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+}
+
+@mixin noOfLines($no) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $no;
+    -webkit-box-orient: vertical;
+}

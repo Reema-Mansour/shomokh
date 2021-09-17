@@ -1,0 +1,62 @@
+// COLORS
+
+$color-primary: #5B1C26;
+$color-primary-light:#954F60;
+$color-primary-lighter: #FBECF1;
+$color-primary-lightest: #FBECF1;
+
+$color-dark:#030303;
+
+
+
+$color-white: #FFFFFF;
+$color-black: #000;
+
+
+html {
+    font-size: 62.5%;
+}
+
+// FONT
+:root {
+    --default-font-size: 1.6rem;
+    --btn-fs: 2.9rem;
+    // --md-fs: 29px;
+    --font-h1: 4.8rem;
+    --font-h2: 4.6rem;
+    --font-h4: 2.1rem;
+    --font-h5: 1.5rem;
+    --font-size-17: 1.7rem;
+    --font-size-18: 1.8rem;
+    --font-size-20: 2rem;
+    --font-size-22: 2rem;
+    --font-size-24: 2.4rem;
+    --font-size-34: 3.4rem;
+
+    --weight-bold: 700;
+    --weight-regular: 400;
+
+    @include respond(991) {
+        --font-h1: 4rem;
+        --font-h2: 3.9rem;
+    }
+}
+
+html {
+    // @include respond(1500) {
+    //     font-size: 20%;
+    // }
+
+    // @include respond(1399) {
+    //     font-size: 55%;
+    // }
+
+
+    @include respond(1199) {
+        font-size: 54.6875%;
+    }
+
+    @include respond(460) {
+        font-size: 43.75%;
+    }
+}

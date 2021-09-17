@@ -1,0 +1,73 @@
+.btn {
+    $btn-height: 6rem;
+
+    font-size: 2.4rem;
+    height: $btn-height;
+    line-height: $btn-height;
+    padding: 0 10rem;
+    font-weight: 700;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 41.38px;
+    background: linear-gradient(#954f60 0%, #5b1c26 100%);
+    color: $color-white;
+
+    @include respond(575) {
+        padding: 0 25px;
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: none !important;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+        box-shadow: rgba($color: #954f60, $alpha: 0.5) 0px 8px 24px;
+        // box-shadow: none !important;
+    }
+
+    span {
+        display: inline-block;
+        height: $btn-height;
+        line-height: $btn-height;
+        transition: transform .65s cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform .65s cubic-bezier(0.2, 1, 0.3, 1), opacity .2s;
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        content: attr(data-text);
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+        height: 100%;
+        line-height: $btn-height;
+        transition: transform .65s cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform .65s cubic-bezier(0.2, 1, 0.3, 1), opacity .2s;
+        transform: scale(0.95) translateY(12px);
+        color: $color-white;
+    }
+
+    &:hover {
+        span {
+            opacity: 0;
+            transform: scale(0.95)translateY(-12px);
+        }
+
+        &::after {
+            top: 0;
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+}
