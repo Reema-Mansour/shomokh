@@ -1,0 +1,153 @@
+.contact-us {
+    .conatct-us-form {
+        padding: 2.6rem;
+        background-color: rgba($color: #29197C, $alpha: 0.085);
+    }
+
+    .heading-title-3 {
+        color: $color-secondary-light;
+    }
+
+    textarea {
+        resize: none;
+
+        &:focus {
+            border-color: rgba($color: $color-secondary-light, $alpha: 0.3);
+            box-shadow: 0 0 0 0.25rem rgba($color: $color-secondary-light, $alpha: 0.25);
+
+        }
+    }
+
+    .validation-code-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &>div {
+            width: 45%;
+            flex: 0 0 45%;
+        }
+
+
+
+        .validation-code-text {
+            background: $color-secondary-light;
+            border: $color-secondary-light;
+            color: $color-white !important;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4rem;
+        }
+
+    }
+
+    .submit-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: stretch;
+
+        @include respond(767) {
+            margin-top: 1.5rem;
+            justify-content: center;
+            align-items: center;
+
+            // .submit-btn {
+            //     width: 50%;
+            // }
+        }
+    }
+
+    .submit-btn {
+        display: block;
+        width: 80%;
+        height: 4rem;
+    }
+}
+
+.quick-contact {
+    margin: 0;
+
+    @include respond(991) {
+        margin-top: 2rem;
+    }
+
+    height: 100%;
+    background-color: rgba($color: #BC9632, $alpha: 0.0805);
+    padding: 3rem 7.7rem 3rem 2.6rem;
+
+    p {
+        font-size: 1.6rem;
+        color: $color-black;
+        line-height: 130%;
+        margin-top: 1.7rem;
+        margin-bottom: 3.9rem;
+    }
+
+    .contact-list {
+        border-bottom: 2px solid #29197C;
+
+        li {
+            margin-bottom: 2rem;
+        }
+
+
+        a {
+            font-size: 1.6rem;
+            color: $color-primary;
+            display: inline-flex;
+            // align-items: center;
+
+            svg {
+                width: 1.8rem;
+                height: 1.8rem;
+                fill: $color-primary;
+                margin-inline-end: 0.9rem;
+                margin-top: 5px;
+            }
+        }
+    }
+
+
+}
+
+.contact-social-follow {
+    padding-top: 2.54rem;
+
+    li {
+        display: inline-block;
+
+        svg {
+            fill: $color-primary;
+            width: 1.9rem;
+            height: 1.9rem;
+            margin-inline-end: 1rem;
+
+            &:hover {
+                fill: $color-secondary-light;
+
+            }
+        }
+    }
+}
+
+.map-section {
+    margin-top: 5.1rem;
+    margin-bottom: 6%;
+
+    .map-wrapper {
+        max-height: 326px;
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

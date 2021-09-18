@@ -1,0 +1,21 @@
+@import "../components/course-card";
+@import "../components/categories";
+
+.courses {
+    margin-bottom: 5%;
+
+    .row {
+        &>div {
+            margin-bottom: 5rem;
+            padding: 0 3rem;
+
+            @include respond(1199) {
+                padding: 0 1.5rem;
+            }
+
+            @include respond(991) {
+                padding: 0 1rem;
+            }
+        }
+    }
+}

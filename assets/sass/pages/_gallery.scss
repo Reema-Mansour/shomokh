@@ -1,0 +1,30 @@
+.gallery-cards {
+    margin-bottom: 7.6%;
+
+    .row {
+        padding-right: -0.75rem;
+        padding-left: -0.75rem;
+
+        @include respond(767) {
+            padding-right: -0.5rem;
+            padding-left: -0.5rem;
+        }
+
+        &>div {
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+
+            @include respond(767) {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+
+            @include respond(400) {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
+
+@import "../components/pagination"

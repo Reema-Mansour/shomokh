@@ -1,0 +1,85 @@
+.news-detail {
+    margin-top: 5rem;
+    margin-bottom: 9.5%;
+
+    .row {
+
+        // gap: 40px;
+        &>div {
+            &:first-child {
+                padding-inline-end: 8rem;
+
+                @include respond(1199) {
+                    padding-inline-end: 2rem;
+                }
+
+                @include respond(767) {
+                    padding-inline-end: 0.75rem;
+                }
+            }
+
+            &:last-child {
+                padding-inline-end: 4rem;
+
+                @include respond(991) {
+                    margin-top: 2rem;
+                    padding-inline-end: 0.75rem;
+                }
+            }
+        }
+    }
+
+    .content {
+
+        p {
+            color: $color-black;
+        }
+
+        img {
+            max-width: 80%;
+
+            @include respond(575) {
+                max-width: 100%;
+            }
+        }
+
+        ul,
+        ol {
+            padding-inline-start: 3rem;
+            margin-top: 1rem;
+
+            li {
+                font-size: 1.6rem;
+                line-height: 190%;
+            }
+        }
+
+        ul {
+            list-style: disc;
+        }
+
+        ol {
+            list-style: decimal;
+        }
+
+        h2,
+        h3,
+        h4 {
+            color: $color-primary;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@import "../components/other-news-card"
