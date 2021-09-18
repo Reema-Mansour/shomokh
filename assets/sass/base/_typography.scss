@@ -12,20 +12,29 @@ body {
     letter-spacing: 0 !important;
     scroll-behavior: unset !important;
 }
-:root{
-  scroll-behavior: unset !important;
+
+:root {
+    scroll-behavior: unset !important;
 }
 
 h1,
 .h1 {
     font-size: var(--font-h1);
     font-weight: var(--weight-bold);
+
+    @include respond(575) {
+        line-height: 52px;
+    }
 }
 
 h2,
 .h2 {
     font-size: var(--font-h2);
     font-weight: var(--weight-bold);
+
+    @include respond(575) {
+        line-height: 52px;
+    }
 }
 
 h4,

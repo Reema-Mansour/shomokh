@@ -31,6 +31,7 @@ html {
     --font-size-20: 2rem;
     --font-size-22: 2rem;
     --font-size-24: 2.4rem;
+    --font-size-26: 2.6rem;
     --font-size-34: 3.4rem;
 
     --weight-bold: 700;
@@ -40,6 +41,15 @@ html {
         --font-h1: 4rem;
         --font-h2: 3.9rem;
     }
+
+    @include respond(575) {
+        --font-h1: 28px;
+        --font-h2: 28px;
+        --font-size-24: 18px;
+        --font-h4: 18px;
+        --font-h5: 14px;
+    }
+
 }
 
 html {
@@ -56,7 +66,7 @@ html {
         font-size: 54.6875%;
     }
 
-    @include respond(460) {
-        font-size: 43.75%;
-    }
+    // @include respond(575) {
+    //     font-size: 43.75%;
+    // }
 }

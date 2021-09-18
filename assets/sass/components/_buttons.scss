@@ -1,6 +1,10 @@
 .btn {
     $btn-height: 6rem;
 
+    @include respond(575) {
+        $btn-height: 50px;
+    }
+
     font-size: 2.4rem;
     height: $btn-height;
     line-height: $btn-height;
@@ -17,10 +21,6 @@
     border-radius: 41.38px;
     background: linear-gradient(#954f60 0%, #5b1c26 100%);
     color: $color-white;
-
-    @include respond(575) {
-        padding: 0 25px;
-    }
 
     &:focus,
     &:active {

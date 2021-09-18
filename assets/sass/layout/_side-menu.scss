@@ -1,0 +1,58 @@
+.sidenav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    background-color: $color-white;
+    height: 100%;
+    padding: 20px 16px;
+    transform: translateX(100%);
+    transition: transform 1000ms cubic-bezier(.19, 1, .22, 1);
+    z-index: 99999999;
+
+    &.active {
+        transform: translateX(0%);
+    }
+
+    &-close-wrap {
+        text-align: left;
+    }
+
+    &-close {
+        background-color: transparent;
+
+        i {
+            font-size: 20px;
+            color: $color-primary;
+
+        }
+    }
+
+    &-menu-list {
+        li {
+            margin-bottom: 1.6rem;
+            display: block;
+            font-size: 16px;
+
+            &.active {
+                font-weight: var(--weight-bold);
+            }
+        }
+    }
+
+    &-link {
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.fade-in {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.23);
+    z-index: 80;
+    display: none;
+}

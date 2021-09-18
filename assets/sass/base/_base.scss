@@ -110,3 +110,9 @@ a {
 i::before {
     color: inherit !important;
 }
+
+.container {
+    @include respond(575) {
+        padding: 0 15px;
+    }
+}

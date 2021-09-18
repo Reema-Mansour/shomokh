@@ -3,12 +3,22 @@
     background-color: $color-primary;
     padding: 4rem 0 3rem;
 
+    @include respond(575) {
+        padding: 38px 0 19px;
+    }
+
     .social-media {
         li {
             display: inline-block;
 
             &:not(:last-of-type) {
                 margin-left: 2.57rem;
+
+                @include respond(575) {
+                    margin-left: 13px;
+
+                }
+
             }
 
             a {
@@ -24,6 +34,10 @@
         }
 
         margin-bottom: 1.6rem;
+
+        @include respond(575) {
+            margin-bottom: 5px;
+        }
     }
 
     p {

@@ -6,7 +6,13 @@
         min-height: 700px;
     }
 
+    @include respond(575) {
+        min-height: 600px;
+    }
 
+    @include respond(460) {
+        min-height: 481px;
+    }
 
     &-bg {
         position: absolute;
@@ -31,9 +37,17 @@
             width: 100%;
             position: relative;
             min-height: 700px;
-            transform: translateY(-92px);
+            transform: translateY(-83px);
         }
 
+        @include respond(575) {
+            min-height: 600px;
+            transform: translateY(-70px);
+        }
+
+        @include respond(460) {
+            min-height: 481px;
+        }
     }
 
     &-content {
@@ -52,6 +66,10 @@
                 margin-top: -9rem;
             }
 
+            @include respond(575) {
+                margin-top: -6.8rem;
+            }
+
             h1 {
                 line-height: 9rem;
                 margin-bottom: 1.6rem;
@@ -60,13 +78,14 @@
                     text-align: center;
                 }
 
+
             }
 
             .cta {
                 margin-top: 5rem;
 
-                @include respond(1199) {
-                    // min-height: 500px;
+                @include respond(575) {
+                    margin-top: 16px;
                 }
             }
         }
@@ -89,6 +108,10 @@
                 line-height: 4.8rem;
                 padding-right: 15px;
 
+                @include respond(575) {
+                    padding-right: 20px;
+                }
+
                 &::before {
                     content: "";
                     display: block;
@@ -102,6 +125,11 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+
+                    @include respond(575) {
+                        transform: translate(50%, 40%);
+                    }
+
                 }
             }
         }

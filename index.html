@@ -22,6 +22,45 @@
 </head>
 
 <body>
+
+    <!-- start side menu -->
+    <div id="fadein" class="fade-in">
+    </div>
+
+    <aside id="side-menu" class="sidenav">
+        <div class="sidenav-close-wrap">
+            <button id="sidenav-close" class="sidenav-close">
+                <i class="icon-close"></i>
+            </button>
+        </div>
+
+        <div class="sidenav-wrap">
+            <ul class="sidenav-menu-list">
+                <li class="sidenav-item active">
+                    <a class="sidenav-link" aria-current="page" href="#html" title="الرئيسية">الرئيسية</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#benefits" title="فوائد عسل الشموخ">فوائد عسل الشموخ</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link " href="#offers" title="عروضات"> عروضات</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#video" title="فيديو"> فيديو</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#testim" title="اراء العملاء"> اراء العملاء</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="#contact" title="تواصل معنا ">تواصل معنا </a> </li>
+            </ul>
+
+        </div>
+
+    </aside>
+    <!-- end side menu -->
+
+
     <!-- start header -->
     <header class="header">
         <nav id="main-nav" class="navbar navbar-expand-md">
@@ -30,7 +69,7 @@
                     <img class="img-fluid" src="./assets/images/logo.svg" decoding="async" width="120px" height="120px"
                         alt="الخليج شوب">
                 </a>
-                <button class="menu-toggler d-md-none d-inline-flex">
+                <button id="side-menu-toggler" class="menu-toggler d-md-none d-inline-flex">
                     <i class="icon-toggler"></i>
                 </button>
 
@@ -67,7 +106,7 @@
         </div>
 
 
-        <div class="header-content">
+        <div id="#advantges" class="header-content">
             <div class="container">
                 <div class="header-content-inner">
                     <h1 class="h1">عسل الشموخ</h1>
@@ -639,7 +678,7 @@
     <!-- main script  -->
     <script>
         // go to the section related with links
-        $('.navbar-menu .nav-link , .contact-cta').on('click', function (event) {
+        $('.navbar-menu .nav-link , .contact-cta , .sidenav-link').on('click', function (event) {
             var $anchor = $(this);
             $('html, body').animate({
                 scrollTop: $($anchor.attr('href')).offset().top - $("#main-nav").height() - 20 + "px"
@@ -677,14 +716,17 @@
             rtl: true,
             dots: false,
             smartSpeed: 1000,
+            items: 3,
             lazyLoad: true,
-            navText: ['<i class="icon-arrow-right"></i>', '<i class="icon-arrow-left"></i>'],
+            navText: ['<i class="icon-arrow_forward_ios"></i>', '<i class="icon-arrow_back_ios"></i>'],
             responsive: {
                 0: {
-                    items: 1
+                    items: 2,
+                    center: true
                 },
-                600: {
-                    items: 3
+                576: {
+                    items: 3,
+                    center: false
                 },
             }
         })
@@ -702,10 +744,10 @@
             dots: false,
             smartSpeed: 1000,
             lazyLoad: true,
-            navText: ['<i class="icon-arrow-right"></i>', '<i class="icon-arrow-left"></i>'],
+            navText: ['<i class="icon-arrow_forward_ios"></i>', '<i class="icon-arrow_back_ios"></i>'],
             responsive: {
                 0: {
-                    items: 3
+                    items: 2
                 },
                 600: {
                     items: 3
@@ -715,6 +757,52 @@
                 }
             }
         })
+
+        $("#side-menu-toggler").on("click", function () {
+            $("#sidenav-close").show();
+            $("#side-menu").addClass("active");
+            $("#fadein").show();
+        });
+        $("#sidenav-close").on("click", function () {
+            $(this).hide();
+            $("#side-menu").removeClass("active");
+            $("#fadein").hide();
+        });
+
+        $(".sidenav-item").on("click", function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            $("#side-menu").removeClass("active");
+            $("#fadein").hide();
+        });
+
+
+        //close side bar when click out of it
+        const $menu = $("#side-menu");
+
+        $(document).mouseup((e) => {
+            if (
+                !$menu.is(e.target) && // if the target of the click isn't the container...
+                $menu.has(e.target).length === 0
+            ) {
+                // ... nor a descendant of the container
+                $menu.removeClass("active");
+                $("#fadein").hide();
+            }
+        });
+
+        // make scroll reveal effect on sections 
+        const sr = ScrollReveal({
+            origin: "top",
+            distance: "30px",
+            duration: 2000,
+            reset: false,
+        });
+
+        sr.reveal(
+            `#benefits, #offers ,#video ,#testim , #contact ,#advantges`, {
+                interval: 200,
+            }
+        );
     </script>
 </body>
 
